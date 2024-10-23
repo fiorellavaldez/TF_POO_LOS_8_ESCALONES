@@ -1,17 +1,9 @@
-from controlador.ControladorVistaInicio import ControladorVistaInicio
-from controlador.ControladorConfiguracion import ControladorConfiguracion
-from vista.VistaInicio import Ui_MainWindow
-# from vista.VistaConfiguracion import Ui_MainWindow
-from PyQt6 import QtCore, QtGui, QtWidgets
+from Controlador.ControladorInicio import ControladorInicio
+from PyQt6 import QtWidgets
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    controlador = ControladorInicio()
     sys.exit(app.exec())
-
-    ControladorVistaInicio()
 
