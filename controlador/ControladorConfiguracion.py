@@ -19,7 +19,6 @@ class ControladorConfiguracion:
         self.__controlador_anterior.MainWindow.show()  # Muestra la ventana anterior
         #hide() permite volver a abrir la misma ventana (.show()) sin perder su estado o tener que volver a inicializarla
         #close() cierra la ventana y destruye el objeto asociado, no se le puede hacer .show(), usar cuando ya no se necesita la ventana y se quiere liberar recursos
-        # by ChatGpt
 
     def __tema_nuevo(self):
         self.MainWindow.hide()
