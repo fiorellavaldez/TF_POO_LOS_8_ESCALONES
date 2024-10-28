@@ -1,4 +1,4 @@
-from Vista.VistaIngresarNombres import Ui_MainWindow
+from vista.VistaIngresarNombres import Ui_MainWindow
 from PyQt6 import QtWidgets
 
 class ControladorIngresarNombres:

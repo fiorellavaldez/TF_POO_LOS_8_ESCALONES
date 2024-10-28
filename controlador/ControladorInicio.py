@@ -1,6 +1,6 @@
-from Controlador.ControladorConfiguracion import ControladorConfiguracion
-from Controlador.ControladorIngresarNombres import ControladorIngresarNombres
-from Vista.VistaInicio import Ui_MainWindow
+from controlador.ControladorConfiguracion import ControladorConfiguracion
+from controlador.ControladorIngresarNombres import ControladorIngresarNombres
+from vista.VistaInicio import Ui_MainWindow
 from PyQt6 import QtWidgets
 
 class ControladorInicio:
