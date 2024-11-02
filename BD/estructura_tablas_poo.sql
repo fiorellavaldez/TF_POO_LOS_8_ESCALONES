@@ -1,11 +1,11 @@
 CREATE TABLE preguntas (
     id_pregunta SERIAL PRIMARY KEY,
     enunciado_pregunta VARCHAR(255) NOT NULL,
-    rta_a CHAR(1) NOT NULL,
-    rta_b CHAR(1) NOT NULL,
-    rta_c CHAR(1) NOT NULL,
-    rta_d CHAR(1) NOT NULL,
-    rta_correcta CHAR(1) NOT NULL,
+    rta_a VARCHAR(50) NOT NULL,
+    rta_b VARCHAR(50) NOT NULL,
+    rta_c VARCHAR(50) NOT NULL,
+    rta_d VARCHAR(50) NOT NULL,
+    rta_correcta VARCHAR(50) NOT NULL,
     tipo_pregunta VARCHAR(100) NOT NULL,
     estado_pregunta BOOLEAN NOT NULL
 );
