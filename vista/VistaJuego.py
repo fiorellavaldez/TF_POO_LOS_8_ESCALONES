@@ -45,7 +45,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.numero_escalon8.sizePolicy().hasHeightForWidth())
         self.numero_escalon8.setSizePolicy(sizePolicy)
         self.numero_escalon8.setText("")
-        self.numero_escalon8.setPixmap(QtGui.QPixmap("../../Downloads/number-8-circle-svgrepo-com.png"))
+        self.numero_escalon8.setPixmap(QtGui.QPixmap("../img/number-8-circle-svgrepo-com.png"))
         self.numero_escalon8.setScaledContents(True)
         self.numero_escalon8.setObjectName("numero_escalon8")
         self.label_tematica8 = QtWidgets.QLabel(parent=self.widget_escalon3)
