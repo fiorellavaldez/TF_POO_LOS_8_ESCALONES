@@ -1,4 +1,4 @@
-from Vista.VistaTemaNuevo import Ui_MainWindow
+from vista.VistaTemaNuevo import Ui_MainWindow
 from PyQt6 import QtWidgets
 
 class ControladorTemaNuevo:

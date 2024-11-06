@@ -1,4 +1,4 @@
-from Vista.VistaIngresarNombres import Ui_MainWindow
+from vista.VistaModificarNombre import Ui_MainWindow #Antes estaba VistaIngresarNombres
 from PyQt6 import QtWidgets
 
 class ControladorIngresarNombres:

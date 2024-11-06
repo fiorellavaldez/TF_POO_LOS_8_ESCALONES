@@ -1,4 +1,4 @@
-from Controlador.ControladorInicio import ControladorInicio
+from controlador.ControladorInicio import ControladorInicio
 from PyQt6 import QtWidgets
 
 if __name__ == "__main__":

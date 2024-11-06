@@ -83,12 +83,19 @@ class Ui_MainWindow(object):
         self.pushButton_5.setText(_translate("MainWindow", "Configuracion"))
         self.pushButton_6.setText(_translate("MainWindow", "Salir"))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())
+    def get_button_configuracion(self):
+        return self.pushButton_5 # estaría bien renombrar los 'pushButton_5' para saber de qué es el botón
+    
+    def get_button_nueva_partida(self):
+        return self.pushButton
+    
+    def get_button_salir(self):
+        return self.pushButton_6
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     MainWindow = QtWidgets.QMainWindow()
+#     ui = Ui_MainWindow()
+#     ui.setupUi(MainWindow)
+#     MainWindow.show()
+#     sys.exit(app.exec())
