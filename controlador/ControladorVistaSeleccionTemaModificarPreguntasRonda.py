@@ -10,7 +10,7 @@ class ControladorVistaSeleccionTemaModificarPreguntasRonda:
         self.MainWindow.show()
         
         self.__vista.get_button_atras().clicked.connect(self.__volver_configuracion)
-#        self.__vista.get_button_agregar_pregunta().clicked.connect(self.)
+#        self.__vista.get_button_agregar_pregunta().clicked.connect(self)
 
     def __volver_configuracion(self):
         self.MainWindow.hide()
