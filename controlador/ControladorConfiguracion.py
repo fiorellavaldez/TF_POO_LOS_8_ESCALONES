@@ -1,8 +1,8 @@
 from vista.VistaConfiguracion import Ui_MainWindow
 from controlador.ControladorTemaNuevo import ControladorTemaNuevo
 from controlador.ControladorModificarTemas import ControladorModificarTemas
-from controlador.ControladorVistaConfiguracionModificarPreguntasDesempate import ControladorVistaConfiguracionModificarPreguntasDeDesempate
-from controlador.ControladorVistaConfiguracionModificarPreguntasRonda import ControladorVistaConfiguracionModificarPreguntasRonda
+from controlador.ControladorVistaSeleccionTemaModificarPreguntasDesempate import ControladorVistaSeleccionTemaModificarPreguntasDesempate
+from controlador.ControladorVistaSeleccionTemaModificarPreguntasRonda import ControladorVistaSeleccionTemaModificarPreguntasRonda
 
 from PyQt6 import QtWidgets
 
@@ -23,11 +23,11 @@ class ControladorConfiguracion:
 
     def __modificar_preguntas_ronda(self):
         self.MainWindow.hide()
-        self.controlador_modificar_preguntas_ronda = ControladorVistaConfiguracionModificarPreguntasRonda(self)
+        self.controlador_tema_preguntas_ronda = ControladorVistaSeleccionTemaModificarPreguntasRonda(self)
 
     def __modificar_preguntas_desempate(self):
         self.MainWindow.hide()
-        self.controlador_modificar_preguntas_desempate = ControladorVistaConfiguracionModificarPreguntasDeDesempate(self)
+        self.controlador_tema_preguntas_desempate = ControladorVistaSeleccionTemaModificarPreguntasDesempate(self)
 
     def __modificar_temas(self):
         self.MainWindow.hide()
