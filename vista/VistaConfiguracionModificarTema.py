@@ -84,12 +84,5 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Tema"))
         self.pushButton_2.setText(_translate("MainWindow", "Atrás"))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())
+    def get_button_atras(self):
+        return self.pushButton_2

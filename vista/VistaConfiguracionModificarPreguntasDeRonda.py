@@ -112,12 +112,8 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "Atrás"))
         self.pushButton_12.setText(_translate("MainWindow", "Agregar nueva pregunta"))
 
+    def get_button_atras(self):
+        return self.pushButton_2
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())
+    def get_button_agregar_pregunta(self):
+        return self.pushButton_12

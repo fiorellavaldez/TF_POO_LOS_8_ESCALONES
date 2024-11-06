@@ -90,17 +90,17 @@ class Ui_MainWindow(object):
         self.pushButton_5.setText(_translate("MainWindow", "Crear Tema Nuevo"))
         self.pushButton_6.setText(_translate("MainWindow", "Atrás"))
 
-    def get_button_atras(self):
+    def get_button_modificar_preguntas_ronda(self):
+        return self.pushButton
+
+    def get_button_modificar_preguntas_desempate(self):
         return self.pushButton_2
-    
+
+    def get_button_modificar_temas(self):
+        return self.pushButton_4
+
     def get_button_tema_nuevo(self):
         return self.pushButton_5
 
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     MainWindow = QtWidgets.QMainWindow()
-#     ui = Ui_MainWindow()
-#     ui.setupUi(MainWindow)
-#     MainWindow.show()
-#     sys.exit(app.exec())
+    def get_button_atras(self):
+        return self.pushButton_6
