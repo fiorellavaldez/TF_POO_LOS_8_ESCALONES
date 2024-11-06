@@ -1,5 +1,6 @@
 from vista.VistaConfiguracion import Ui_MainWindow
 from controlador.ControladorTemaNuevo import ControladorTemaNuevo
+
 from PyQt6 import QtWidgets
 
 class ControladorConfiguracion:

@@ -1,5 +1,4 @@
 from controlador.ControladorConfiguracion import ControladorConfiguracion
-from controlador.ControladorIngresarNombres import ControladorIngresarNombres
 from vista.VistaPantallaInicio import Ui_MainWindow
 from PyQt6 import QtWidgets
 
@@ -12,16 +11,12 @@ class ControladorInicio:
         self.MainWindow.show()
 
         self.__vista.get_button_configuracion().clicked.connect(self.__configuracion) #Clickear el boton (Es un evento) ?
-        self.__vista.get_button_nueva_partida().clicked.connect(self.__ingresar_nombres)
+#        self.__vista.get_button_nueva_partida().clicked.connect(self.__ingresar_nombres)
         self.__vista.get_button_salir().clicked.connect(self.__salir)
 
     def __configuracion(self):
         self.MainWindow.hide()
         self.controlador_configuracion = ControladorConfiguracion(self)
-
-    def __ingresar_nombres(self):
-        self.MainWindow.hide()
-        self.controlador_ingresar_nombres = ControladorIngresarNombres(self)
     
     def __salir(self):
         self.MainWindow.close() #si es la última ventana abierta y hacemos .close(), se cierra el programa y termina la ejecución del bucle de Qt (que está en el main)
