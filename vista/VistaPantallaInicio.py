@@ -39,12 +39,6 @@ class Ui_MainWindow(object):
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout_3.addWidget(self.pushButton)
-        self.pushButton_2 = QtWidgets.QPushButton(parent=self.centralwidget)
-        font = QtGui.QFont()
-        font.setPointSize(22)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.verticalLayout_3.addWidget(self.pushButton_2)
         self.pushButton_4 = QtWidgets.QPushButton(parent=self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(22)
@@ -83,12 +77,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Configuración"))
-        self.pushButton.setText(_translate("MainWindow", "Modificar Peguntas de Ronda"))
-        self.pushButton_2.setText(_translate("MainWindow", "  Modificar Peguntas de Desempate  "))
-        self.pushButton_4.setText(_translate("MainWindow", "Modificar Temas"))
-        self.pushButton_5.setText(_translate("MainWindow", "Crear Tema Nuevo"))
-        self.pushButton_6.setText(_translate("MainWindow", "Atrás"))
+        self.label.setText(_translate("MainWindow", "Los 8 Escalones"))
+        self.pushButton.setText(_translate("MainWindow", "Nueva Partida"))
+        self.pushButton_4.setText(_translate("MainWindow", "Continuar"))
+        self.pushButton_5.setText(_translate("MainWindow", "Configuracion"))
+        self.pushButton_6.setText(_translate("MainWindow", "Salir"))
 
 
 if __name__ == "__main__":

@@ -33,7 +33,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Configuración</string>
+         <string>Los 8 Escalones</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -65,19 +65,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Modificar Peguntas de Ronda</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="font">
-           <font>
-            <pointsize>22</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>  Modificar Peguntas de Eliminación  </string>
+           <string>Nueva Partida</string>
           </property>
          </widget>
         </item>
@@ -89,7 +77,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Modificar Temas</string>
+           <string>Continuar</string>
           </property>
          </widget>
         </item>
@@ -101,7 +89,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Crear Tema Nuevo</string>
+           <string>Configuracion</string>
           </property>
          </widget>
         </item>
@@ -113,7 +101,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Atrás</string>
+           <string>Salir</string>
           </property>
          </widget>
         </item>
