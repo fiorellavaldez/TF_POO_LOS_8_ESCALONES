@@ -1,12 +1,12 @@
 from vista.VistaConfiguracion import Ui_MainWindow
-from controlador.ControladorTemaNuevo import ControladorTemaNuevo
-from controlador.ControladorModificarTemas import ControladorModificarTemas
+from controlador.ControladorVistaTemaNuevo import ControladorVistaTemaNuevo
+from controlador.ControladorVistaConfiguracionModificarTemas import ControladorVistaConfiguracionModificarTemas
 from controlador.ControladorVistaSeleccionTemaModificarPreguntasDesempate import ControladorVistaSeleccionTemaModificarPreguntasDesempate
 from controlador.ControladorVistaSeleccionTemaModificarPreguntasRonda import ControladorVistaSeleccionTemaModificarPreguntasRonda
 
 from PyQt6 import QtWidgets
 
-class ControladorConfiguracion:
+class ControladorVistaConfiguracion:
 
     def __init__(self, controlador_anterior):
         self.__controlador_anterior = controlador_anterior
@@ -31,11 +31,11 @@ class ControladorConfiguracion:
 
     def __modificar_temas(self):
         self.MainWindow.hide()
-        self.controlador_modificar_temas = ControladorModificarTemas(self)
+        self.controlador_modificar_temas = ControladorVistaConfiguracionModificarTemas(self)
 
     def __tema_nuevo(self):
         self.MainWindow.hide()
-        self.controlador_tema_nuevo = ControladorTemaNuevo(self)
+        self.controlador_tema_nuevo = ControladorVistaTemaNuevo(self)
 
     def __volver_menu(self):
         self.MainWindow.close()

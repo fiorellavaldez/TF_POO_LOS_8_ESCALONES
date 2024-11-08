@@ -114,6 +114,11 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "Cancelar"))
         self.pushButton_3.setText(_translate("MainWindow", "Aceptar"))
 
+    def get_button_cancelar(self):
+        return self.pushButton_2
+    
+    def get_button_aceptar(self):
+        return self.pushButton_3
 
 if __name__ == "__main__":
     import sys

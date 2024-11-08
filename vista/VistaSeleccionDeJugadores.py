@@ -1,6 +1,5 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -359,34 +358,94 @@ class Ui_MainWindow(object):
         self.label_57.setText(_translate("MainWindow", "Jugador 1"))
         self.pushButton_115.setText(_translate("MainWindow", "Seleccionar Jugador"))
         self.pushButton_116.setText(_translate("MainWindow", "Jugador Nuevo"))
-        self.label_56.setText(_translate("MainWindow", "Jugador 1"))
+        self.label_56.setText(_translate("MainWindow", "Jugador 2"))
         self.pushButton_113.setText(_translate("MainWindow", "Seleccionar Jugador"))
         self.pushButton_114.setText(_translate("MainWindow", "Jugador Nuevo"))
-        self.label_53.setText(_translate("MainWindow", "Jugador 1"))
+        self.label_53.setText(_translate("MainWindow", "Jugador 3"))
         self.pushButton_107.setText(_translate("MainWindow", "Seleccionar Jugador"))
         self.pushButton_108.setText(_translate("MainWindow", "Jugador Nuevo"))
-        self.label_55.setText(_translate("MainWindow", "Jugador 1"))
+        self.label_55.setText(_translate("MainWindow", "Jugador 4"))
         self.pushButton_111.setText(_translate("MainWindow", "Seleccionar Jugador"))
         self.pushButton_112.setText(_translate("MainWindow", "Jugador Nuevo"))
-        self.label_58.setText(_translate("MainWindow", "Jugador 1"))
+        self.label_58.setText(_translate("MainWindow", "Jugador 5"))
         self.pushButton_117.setText(_translate("MainWindow", "Seleccionar Jugador"))
         self.pushButton_118.setText(_translate("MainWindow", "Jugador Nuevo"))
-        self.label_59.setText(_translate("MainWindow", "Jugador 1"))
+        self.label_59.setText(_translate("MainWindow", "Jugador 6"))
         self.pushButton_119.setText(_translate("MainWindow", "Seleccionar Jugador"))
         self.pushButton_120.setText(_translate("MainWindow", "Jugador Nuevo"))
-        self.label_60.setText(_translate("MainWindow", "Jugador 1"))
+        self.label_60.setText(_translate("MainWindow", "Jugador 7"))
         self.pushButton_121.setText(_translate("MainWindow", "Seleccionar Jugador"))
         self.pushButton_122.setText(_translate("MainWindow", "Jugador Nuevo"))
-        self.label_52.setText(_translate("MainWindow", "Jugador 1"))
+        self.label_52.setText(_translate("MainWindow", "Jugador 8"))
         self.pushButton_105.setText(_translate("MainWindow", "Seleccionar Jugador"))
         self.pushButton_106.setText(_translate("MainWindow", "Jugador Nuevo"))
-        self.label_54.setText(_translate("MainWindow", "Jugador 1"))
+        self.label_54.setText(_translate("MainWindow", "Jugador 9"))
         self.pushButton_109.setText(_translate("MainWindow", "Seleccionar Jugador"))
         self.pushButton_110.setText(_translate("MainWindow", "Jugador Nuevo"))
         self.pushButton.setText(_translate("MainWindow", "Atrás"))
         self.pushButton_2.setText(_translate("MainWindow", "Iniciar Partida"))
 
-
+    def get_button_seleccionar_jugador1(self):
+        return self.pushButton_115
+    
+    def get_button_jugador_nuevo1(self):
+        return self.pushButton_116
+    
+    def get_button_seleccionar_jugador2(self):
+        return self.pushButton_113
+    
+    def get_button_jugador_nuevo2(self):
+        return self.pushButton_114
+    
+    def get_button_seleccionar_jugador3(self):
+        return self.pushButton_107
+    
+    def get_button_jugador_nuevo3(self):
+        return self.pushButton_108
+    
+    def get_button_seleccionar_jugador4(self):
+        return self.pushButton_111
+    
+    def get_button_jugador_nuevo4(self):
+        return self.pushButton_112
+    
+    def get_button_seleccionar_jugador5(self):
+        return self.pushButton_117
+    
+    def get_button_jugador_nuevo5(self):
+        return self.pushButton_118
+    
+    def get_button_seleccionar_jugador6(self):
+        return self.pushButton_119
+    
+    def get_button_jugador_nuevo6(self):
+        return self.pushButton_120
+    
+    def get_button_seleccionar_jugador7(self):
+        return self.pushButton_121
+    
+    def get_button_jugador_nuevo7(self):
+        return self.pushButton_122
+    
+    def get_button_seleccionar_jugador8(self):
+        return self.pushButton_105
+    
+    def get_button_jugador_nuevo8(self):
+        return self.pushButton_106
+    
+    def get_button_seleccionar_jugador9(self):
+        return self.pushButton_109
+    
+    def get_button_jugador_nuevo9(self):
+        return self.pushButton_110
+    
+    def get_button_atras(self):
+        return self.pushButton
+    
+    def get_button_iniciar_partida(self):
+        return self.pushButton_2
+    
+    
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

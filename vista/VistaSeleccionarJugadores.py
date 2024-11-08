@@ -115,6 +115,11 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "Atrás"))
         self.pushButton.setText(_translate("MainWindow", "Aceptar"))
 
+    def get_button_atras(self):
+        return self.pushButton_2
+    
+    def get_button_aceptar(self):
+        return self.pushButton
 
 if __name__ == "__main__":
     import sys

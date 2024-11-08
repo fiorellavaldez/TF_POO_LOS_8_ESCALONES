@@ -2,7 +2,7 @@ from vista.VistaConfiguracionModificarTema import Ui_MainWindow
 
 from PyQt6 import QtWidgets
 
-class ControladorModificarTemas:
+class ControladorVistaConfiguracionModificarTemas:
     def __init__(self, controlador_anterior):
         self.__controlador_anterior = controlador_anterior
         self.MainWindow = QtWidgets.QMainWindow()

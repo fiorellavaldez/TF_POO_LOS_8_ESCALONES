@@ -89,6 +89,9 @@ class Ui_MainWindow(object):
     def get_button_nueva_partida(self):
         return self.pushButton
     
+    def get_button_continuar(self):
+        return self.pushButton_4
+    
     def get_button_salir(self):
         return self.pushButton_6
 # if __name__ == "__main__":
