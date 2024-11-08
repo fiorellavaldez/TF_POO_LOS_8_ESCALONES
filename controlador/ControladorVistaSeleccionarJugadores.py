@@ -1,4 +1,4 @@
-from Vista.VistaSeleccionarJugadores import Ui_MainWindow
+from vista.VistaSeleccionarJugadores import Ui_MainWindow
 from PyQt6 import QtWidgets
 
 class ControladorVistaSeleccionarJugadores:
