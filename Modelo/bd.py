@@ -24,18 +24,3 @@ class Database(metaclass=DataBaseMeta):
             print(error)
     
 
-    def getAll(self, query):
-        cursor = self.conexion.cursor()
-        cursor.execute(query)
-        return cursor.fetchall()
-    
-    def get(self, query):
-        cursor = self.conexion.cursor()
-        cursor.execute(query)
-        return cursor.fetchone()
-
-    def query(self, query):
-        cursor = self.conexion.cursor()
-        result = cursor.execute(query)
-        cursor.connection.commit()
-        return result
