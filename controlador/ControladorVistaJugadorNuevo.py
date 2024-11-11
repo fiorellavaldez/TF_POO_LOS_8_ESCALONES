@@ -11,9 +11,9 @@ class ControladorVistaJugadorNuevo:
         self.__vista.setupUi(self.MainWindow)
         self.MainWindow.show()
         
-        self.__vista.get_button_aceptar().clicked.connect(self.__agregar_jugador_bd_)
+        self.__vista.get_button_agregar_jugador().clicked.connect(self.__agregar_jugador_bd_)
         self.__vista.get_button_cancelar().clicked.connect(self.__volver_seleccion_de_jugadores)
-        
+
         
     def __volver_seleccion_de_jugadores(self):
         self.MainWindow.close()
