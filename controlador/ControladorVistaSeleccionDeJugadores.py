@@ -1,7 +1,7 @@
 from vista.VistaSeleccionDeJugadores import Ui_MainWindow
 from controlador.ControladorVistaSeleccionarJugadores import ControladorVistaSeleccionarJugadores
 from controlador.ControladorVistaJugadorNuevo import ControladorVistaJugadorNuevo
-#from controlador.ControladorVistaJuego import ControladorVistaJuego
+from controlador.ControladorVistaJuego import ControladorVistaJuego
 from PyQt6 import QtWidgets
 
 class ControladorVistaSeleccionDeJugadores:
@@ -31,7 +31,7 @@ class ControladorVistaSeleccionDeJugadores:
         self.__vista.get_button_jugador_nuevo8().clicked.connect(self.__jugador_nuevo)
         self.__vista.get_button_seleccionar_jugador9().clicked.connect(self.__elegir_jugador)
         self.__vista.get_button_jugador_nuevo9().clicked.connect(self.__jugador_nuevo)
-        #self.__vista.get_button_iniciar_partida().clicked.connect(self.__iniciar_partida)
+        self.__vista.get_button_iniciar_partida().clicked.connect(self.__iniciar_partida)
         self.__vista.get_button_atras().clicked.connect(self.__volver_menu)
 
     def __elegir_jugador(self):
@@ -42,9 +42,9 @@ class ControladorVistaSeleccionDeJugadores:
         self.MainWindow.hide()
         self.controlador_jugador_nuevo= ControladorVistaJugadorNuevo(self)
 
-    #def __iniciar_partida(self):
-        #self.MainWindow.hide()
-        #self.controlador_iniciar_partida = ControladorVistaJuego(self)
+    def __iniciar_partida(self):
+        self.MainWindow.hide()
+        self.controlador_iniciar_partida = ControladorVistaJuego(self)
 
     def __volver_menu(self):
         self.MainWindow.close()

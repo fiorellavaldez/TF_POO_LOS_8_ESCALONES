@@ -16,7 +16,9 @@ class JugadorDAO:
         with self.connection.cursor() as cursor:
             cursor.execute("SELECT nombre_jugador, puntaje FROM jugador WHERE id_jugador = %s", (id_jugador,))
             return cursor.fetchone()
-
+        
+    ''' # cuando se agrega un jugador a la BD solo es necesario el nombre , el ID es tipo serial no es necesario pasar como parametro
+    
     def agregar_jugador(self, id_jugador, nombre_jugador, puntaje , estado_jugador):
         with self.connection.cursor() as cursor:
             cursor.execute(
@@ -25,7 +27,16 @@ class JugadorDAO:
                 (id_jugador, nombre_jugador, puntaje , estado_jugador)
             )
             self.connection.commit()
-
+    '''
+    def agregar_jugador(self, nombre_jugador):
+        with self.connection.cursor() as cursor:
+            cursor.execute(
+                """INSERT INTO jugador (nombre_jugador) 
+                VALUES (%s)""",
+                (nombre_jugador)
+            )
+            self.connection.commit()
+            
     def actualizar_jugador(self, id_jugador, nombre_jugador, puntaje):
         with self.connection.cursor() as cursor:
             cursor.execute(

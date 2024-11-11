@@ -120,6 +120,28 @@ class Ui_MainWindow(object):
     def get_button_aceptar(self):
         return self.pushButton_3
 
+    def get_boton_deslizador_derecha(self):
+        return self.pushButton_4
+    
+    def get_boton_deslizador_izquierda(self):
+        return self.pushButton
+    
+    def get_entrada_texto(self): #para obtener el dato que se escribio 
+        return  self.lineEdit.text()
+    
+    def imprimo_alerta (self):
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(QtWidgets.QMessageBox.Icon.Critical)
+        msg.setText("El campo esta vacio o con datos incorrectos")
+        msg.setInformativeText("Introduzca bien el dato y vuelva a presionar")
+        msg.exec()
+    
+    def notifico_insercion(self,nombre_jugador):
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(QtWidgets.QMessageBox.Icon.Information)
+        msg.setText(f"Se añadió correctamente el jugador: {nombre_jugador}")
+        msg.exec()
+    
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
