@@ -1,4 +1,4 @@
-from DAOjugador import DAOjugador
+from modelo.DAOjugador import DAOjugador
 
 jugador_dao = DAOjugador()
 

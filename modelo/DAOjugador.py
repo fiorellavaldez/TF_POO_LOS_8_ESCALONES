@@ -1,4 +1,4 @@
-from Config_BD import Database
+from modelo.Config_BD import Database
 from Jugador import Jugador
 
 class DAOjugador:
