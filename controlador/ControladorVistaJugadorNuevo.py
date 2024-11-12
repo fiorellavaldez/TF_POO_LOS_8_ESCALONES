@@ -1,6 +1,6 @@
 from vista.VistaJugadorNuevo import Ui_MainWindow
 from PyQt6 import QtWidgets
-from modelo.Jugador import Jugador
+from Modelo.Jugador import Jugador
 
 class ControladorVistaJugadorNuevo:
 

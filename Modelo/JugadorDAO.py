@@ -16,33 +16,25 @@ class JugadorDAO:
         with self.connection.cursor() as cursor:
             cursor.execute("SELECT nombre_jugador, puntaje FROM jugador WHERE id_jugador = %s", (id_jugador,))
             return cursor.fetchone()
-        
-    ''' # cuando se agrega un jugador a la BD solo es necesario el nombre , el ID es tipo serial no es necesario pasar como parametro
-    
-    def agregar_jugador(self, id_jugador, nombre_jugador, puntaje , estado_jugador):
+
+    def agregar_jugador(self, jugador):
         with self.connection.cursor() as cursor:
             cursor.execute(
                 """INSERT INTO jugador (id_jugador, nombre_jugador, puntaje , estado_jugador) 
                 VALUES (%s, %s, %s, %s)""",
-                (id_jugador, nombre_jugador, puntaje , estado_jugador)
+                (jugador.get_id_jugador(), jugador.get_nombre_jugador(), jugador.get_puntaje() , jugador.get_estado_jugador())
             )
+            indice_jugador = cursor.execute ("SELECT MAX(id_jugador) FROM jugador ")
+            jugador.set_id_jugador (int(indice_jugador)) #esto lo que hace es incrementar el indice porque los id son tipo serial
             self.connection.commit()
-    '''
-    def agregar_jugador(self, nombre_jugador):
-        with self.connection.cursor() as cursor:
-            cursor.execute(
-                """INSERT INTO jugador (nombre_jugador) 
-                VALUES (%s)""",
-                (nombre_jugador)
-            )
             self.connection.commit()
-            
-    def actualizar_jugador(self, id_jugador, nombre_jugador, puntaje):
+
+    def actualizar_jugador(self, jugador):
         with self.connection.cursor() as cursor:
             cursor.execute(
                 """UPDATE jugador SET nombre_jugador = %s, puntaje = %s 
                 WHERE id_jugador = %s""",
-                (nombre_jugador, puntaje, id_jugador)
+                (jugador.get_nombre_jugador(), jugador.get_puntaje(), jugador.get_id_jugador())
             )
             self.connection.commit()
 
