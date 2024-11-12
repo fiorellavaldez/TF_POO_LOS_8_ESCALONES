@@ -31,6 +31,7 @@ class ControladorVistaSeleccionDeJugadores:
         self.__vista.get_button_jugador_nuevo8().clicked.connect(self.__jugador_nuevo)
         self.__vista.get_button_seleccionar_jugador9().clicked.connect(self.__elegir_jugador)
         self.__vista.get_button_jugador_nuevo9().clicked.connect(self.__jugador_nuevo)
+
         self.__vista.get_button_iniciar_partida().clicked.connect(self.__iniciar_partida)
         self.__vista.get_button_atras().clicked.connect(self.__volver_menu)
 
@@ -51,3 +52,5 @@ class ControladorVistaSeleccionDeJugadores:
         self.__controlador_anterior.MainWindow.show()  # Muestra la ventana anterior
         #hide() permite volver a abrir la misma ventana (.show()) sin perder su estado o tener que volver a inicializarla
         #close() cierra la ventana y destruye el objeto asociado, no se le puede hacer .show(), usar cuando ya no se necesita la ventana y se quiere liberar recursos
+        
+    

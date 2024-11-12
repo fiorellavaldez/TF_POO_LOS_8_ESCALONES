@@ -112,12 +112,12 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "<"))
         self.pushButton_4.setText(_translate("MainWindow", ">"))
         self.pushButton_2.setText(_translate("MainWindow", "Cancelar"))
-        self.pushButton_3.setText(_translate("MainWindow", "Aceptar"))
+        self.pushButton_3.setText(_translate("MainWindow", "Agregar Jugador"))
 
     def get_button_cancelar(self):
         return self.pushButton_2
     
-    def get_button_aceptar(self):
+    def get_button_agregar_jugador(self):
         return self.pushButton_3
 
     def get_boton_deslizador_derecha(self):

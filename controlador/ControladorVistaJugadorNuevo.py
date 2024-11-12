@@ -13,18 +13,20 @@ class ControladorVistaJugadorNuevo:
         
         self.__vista.get_button_agregar_jugador().clicked.connect(self.__agregar_jugador_bd_)
         self.__vista.get_button_cancelar().clicked.connect(self.__volver_seleccion_de_jugadores)
-
+        #self.__vista.get_boton_deslizador_derecha().clicked.connect(self.__mostrar_siguiente_imagen)
+        #self.__vista.get_boton_deslizador_izquierda().clicked.connect(self.__mostrar_imagen_anterior)
         
     def __volver_seleccion_de_jugadores(self):
         self.MainWindow.close()
         self.__controlador_anterior.MainWindow.show()
         
     def __agregar_jugador_bd_(self):
+        #Agrega un nuevo jugador y su avatar a la BD,Validandolos
         try:
             nombre_jugador=self.__vista.get_entrada_texto()
             
-            if None in nombre_jugador or '' in nombre_jugador:
-                raise ValueError
+            if not nombre_jugador:
+                raise ValueError("El nombre del jugador esta vacio")
             else:
                 jugador_nuevo=Jugador()
                 jugador_nuevo.agregar_jugador(nombre_jugador)
@@ -32,3 +34,14 @@ class ControladorVistaJugadorNuevo:
                 self.MainWindow.close()
         except:
                 self.__vista.imprimo_alerta()
+    '''            
+    def __mostrar_siguiente_imagen(self):
+        pass
+    
+    
+    def __mostrar_imagen_anterior(self):
+        pass
+        
+    '''
+        
+    

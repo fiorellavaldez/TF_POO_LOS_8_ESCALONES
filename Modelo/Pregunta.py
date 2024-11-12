@@ -7,7 +7,7 @@ class Pregunta:
     
     def get_all_preguntas(self):
         return self.__pregdao.get_all_preguntas()
-          
+
     def get_pregunta_by_id(self, id_pregunta):
         return self.__pregdao.get_pregunta(id_pregunta)
 

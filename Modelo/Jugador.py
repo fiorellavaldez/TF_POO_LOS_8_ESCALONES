@@ -17,8 +17,8 @@ class Jugador:
         return self.__jugadordao.agregar_jugador(id_jugador, nombre_jugador, puntaje , estado_jugador)
     '''
     #nos interesa agregar solo el nombre el ID ya es de tipo SERIAL no es neceario pasar como parametro
-    def agregar_jugador(self, nombre_jugador):
-        return self.__jugadordao.agregar_jugador( nombre_jugador)
+    def agregar_jugador(self, nombre_jugador,img_avatar):
+        return self.__jugadordao.agregar_jugador( nombre_jugador,img_avatar)
 
     def actualizar_jugador(self, id_jugador, nombre_jugador, puntaje):
         return self.__jugadordao.actualizar_jugador(id_jugador, nombre_jugador, puntaje)
