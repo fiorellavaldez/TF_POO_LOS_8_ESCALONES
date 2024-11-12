@@ -45,16 +45,16 @@ for i in range(8):
     lista8Temas.append(listaTemas(i))
 
 # El escalon seria una clase en si, tendria datos como: participantes activos o eliminados, tema
-escalon1 = Escalon
-escalon2 = Escalon
-escalon3 = Escalon
-escalon4 = Escalon
-escalon5 = Escalon
-escalon6 = Escalon
-escalon7 = Escalon
-escalon8 = Escalon
+escalon1 = Escalon()
+escalon2 = Escalon()
+escalon3 = Escalon()
+escalon4 = Escalon()
+escalon5 = Escalon()
+escalon6 = Escalon()
+escalon7 = Escalon()
+escalon8 = Escalon()
 
-escalon1.set_jugadores(listaJugadores)
+escalon1.set_jugadores(listaJugadores) # le doy la lista de jugadoes completa al primer escalon
 
 listaEscalones = [escalon1, escalon2, escalon3, escalon4, escalon5, escalon6, escalon7, escalon8]
 
@@ -64,54 +64,30 @@ for i in range(8):
 partida = Partida(listaEscalones) #instanciamos el objeto partida con los 8 escalones
 
 
+for i in range (listaEscalones):
+    
+    #iniciamos una ronda
+    #ronda1
+    
+    #le hacemos una pregunta a un jugador, obtenemos si acertó o no 
+    #le hacemos una pregunta al siguiente y así hasta completar una pregunta a cada jugador
+    
+    #ronda2
+    #le hacemos una pregunta a un jugador, obtenemos si acertó o no 
+    #le hacemos una pregunta al siguiente y así hasta completar una pregunta a cada jugador
 
+    #evaluamos los errores de todos los jugadores y puede suceder lo siguiente
 
+        # TODOS BIEN: Empatan todos los jugadores contenstando bien todas las preguntas de las 2 rondas --> los jugadores van a ronda de pregutna de desempate
+        
+        # 2 O MAS EMPATADOS: Empatan 2 o mas jugadores en mayor cantidad de errores --> los jugadores empatados van a ronda de pregunta de desempate
+        
+        # Hay solo un jugador que tiene mas erradas que los demas --> se elimina ese jugador de la lista de jugadores
+        
+    # se hace un desempate si es necesario entre los jugadores empatados
+    
+    #en cualquiera de los 3 casos anteriores, se elimina un solo jugador
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# todo el juego seria una iteracion sobre la lista de 8 escalones
-
-# le doy los jugadores a escalon 1 
-escalon1.set_jugadores(listaJugadores)
-
-#les hacemos preguntas a los jugadores y sale quien tiene que ser eliminado
-
-#escalon1.quitarJugador(jugador)
-#escalon1.set_jugadorEliminado(jugador)
-
-#terminó el escalon1
-
-escalon2.set_jugadores(escalon1.get_jugadores())
+    # i = escalon
     
     
-    
-    
-    
-
