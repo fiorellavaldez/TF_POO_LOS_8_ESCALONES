@@ -1,6 +1,6 @@
 class Escalon():
     def __init__(self):
-        #self.__idEscalon = 0 sdfsdfsdf
+        #self.__idEscalon = 0
         self.__tema = None
         self.__jugadores = []
     
