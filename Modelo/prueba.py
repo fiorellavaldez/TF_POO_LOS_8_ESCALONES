@@ -64,7 +64,7 @@ for i in range(8):
 partida = Partida(listaEscalones) #instanciamos el objeto partida con los 8 escalones
 
 
-for i in range (listaEscalones):
+#for i in range (listaEscalones):
     
     #iniciamos una ronda
     #ronda1
@@ -90,4 +90,105 @@ for i in range (listaEscalones):
 
     # i = escalon
     
+def iniciar_partida(partida):
+    """
+    Procedimiento que recorre los escalones de la partida, ejecutando las rondas y manejando las eliminaciones.
+    :param partida: Partida, objeto que contiene los escalones y jugadores
+    """
+    for escalon in partida.get_escalones():
+        print(f"\n--- Comenzando Escalón con tema {(escalon.get_tema()).get_nombreTema()} ---")
+
+        # Ronda 1
+        for jugador in escalon.get_jugadores():
+            # Simulamos hacerle una pregunta y obtener si acertó (0: no contestó, 1: acertó, 2: falló)
+            jugador.set_ronda1(hacer_pregunta(jugador, (escalon.get_tema()).get_preguntas_deronda))  # <------------------ACA NOS QUEDAMOS!!!
+        
+        # Ronda 2
+        for jugador in escalon.get_jugadores():
+            jugador.ronda2 = hacer_pregunta(jugador, escalon.tema.preguntas_deronda)
+
+        # Evaluamos los resultados de las dos rondas
+        jugadores_a_desempatar = evaluar_jugadores(escalon.jugadores)
+        
+        # Si hay jugadores empatados (o todos acertaron), hacemos un desempate
+        if len(jugadores_a_desempatar) > 1:
+            print("Empate detectado. Comenzando ronda de desempate...")
+            jugadores_a_eliminar = hacer_desempate(jugadores_a_desempatar, escalon.tema.preguntas_desempate)
+        else:
+            # Si solo hay un jugador con más errores, lo eliminamos directamente
+            jugadores_a_eliminar = jugadores_a_desempatar
+
+        # Eliminamos al jugador correspondiente
+        for jugador in jugadores_a_eliminar:
+            escalon.eliminar_jugador(jugador)
+
+def hacer_pregunta(jugador, preguntas):
+    """
+    Simula hacer una pregunta al jugador y devuelve si acertó o no.
+    :param jugador: Jugador, objeto de la clase Jugador
+    :param preguntas: list, lista de preguntas disponibles
+    :return: int, 1 si acertó, 2 si falló
+    """
+    # Aquí puedes hacer la lógica para elegir una pregunta y obtener una respuesta del jugador
+    # Por ahora, simulamos respuestas aleatorias:
+    import random
+    resultado = random.choice([1, 2])  # 1: acertó, 2: falló
+    print(f"{jugador.nombre} responde {'bien' if resultado == 1 else 'mal'} en la ronda.")
+    return resultado
+
+def evaluar_jugadores(jugadores):
+    """
+    Evalúa los resultados de las dos rondas para determinar quiénes van a desempate o quién será eliminado.
+    :param jugadores: list, lista de objetos de la clase Jugador
+    :return: list, lista de jugadores que deben ir a desempate o el jugador que será eliminado
+    """
+    jugadores_errados = {}
     
+    # Contar los errores de cada jugador (ronda 1 + ronda 2)
+    for jugador in jugadores:
+        errores = (jugador.ronda1 == 2) + (jugador.ronda2 == 2)
+        jugadores_errados[jugador] = errores
+    
+    # Buscamos los jugadores con el máximo número de errores
+    max_errores = max(jugadores_errados.values())
+    jugadores_con_max_errores = [jugador for jugador, errores in jugadores_errados.items() if errores == max_errores]
+    
+    # Si todos acertaron todas las preguntas
+    if max_errores == 0:
+        print("Todos los jugadores acertaron, van a desempate.")
+        return jugadores
+    
+    # Si hay empate entre dos o más jugadores con el máximo de errores
+    if len(jugadores_con_max_errores) > 1:
+        print(f"Empate entre {len(jugadores_con_max_errores)} jugadores con más errores.")
+        return jugadores_con_max_errores
+    
+    # Si hay un único jugador con más errores
+    print(f"{jugadores_con_max_errores[0].nombre} tiene más errores y será eliminado.")
+    return jugadores_con_max_errores
+
+def hacer_desempate(jugadores, preguntas_desempate):
+    """
+    Simula la ronda de desempate entre los jugadores empatados.
+    :param jugadores: list, lista de objetos de la clase Jugador que irán al desempate
+    :param preguntas_desempate: list, lista de preguntas de desempate disponibles
+    :return: list, lista de un solo jugador que será eliminado
+    """
+    import random
+
+    # Hacemos preguntas de desempate a los jugadores
+    respuestas = {}
+    for jugador in jugadores:
+        respuesta = random.randint(1, 100)  # Simulamos una respuesta numérica para la pregunta de desempate
+        respuestas[jugador] = respuesta
+        print(f"{jugador.nombre} responde {respuesta} en la pregunta de desempate.")
+
+    # La respuesta correcta simulada
+    respuesta_correcta = random.randint(1, 100)
+    print(f"La respuesta correcta era: {respuesta_correcta}")
+
+    # Evaluamos quién estuvo más cerca
+    jugador_eliminado = min(jugadores, key=lambda j: abs(respuestas[j] - respuesta_correcta))
+    
+    print(f"{jugador_eliminado.nombre} estuvo más lejos y será eliminado.")
+    return [jugador_eliminado]
