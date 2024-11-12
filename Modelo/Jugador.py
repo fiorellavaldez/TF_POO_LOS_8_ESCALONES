@@ -1,52 +1,16 @@
-from .JugadorDAO import JugadorDAO
+class Jugador():
+    def __init__ (self, nombre, avatar):
 
-class Jugador:
-    def __init__(self, id_jugador, nombre_jugador, imagen, ronda1, ronda2, escalon_actual):
-        #self.__jugadordao = JugadorDAO()
-        #self.__id_jugador = id_jugador
-        self.__nombre_jugador = nombre_jugador
-        self.__imagen = imagen
-        #self.__puntaje = puntaje
-        #self.__estado_jugador = estado_jugador
-        self.__ronda1 = ronda1
-        self.__ronda2 = ronda2
-        self.__escalon_actual = escalon_actual
-    
+        #Constructor para inicializar un jugador.
+        #-parametro nombre: str, nombre del jugador
+        #-parametro avatar: str, avatar del jugador (puede ser una cadena con la ruta de la imagen o el nombre del avatar)
 
-    # def get_all_jugadores(self):
-    #     return self.__jugadordao.get_all_jugadores()
+        self.__nombre = nombre  # Nombre del jugador
+        self.__avatar = avatar  # Avatar del jugador
+        self.__ronda1 = 0  # 0: no contestó, 1: respondió bien, 2: respondió mal
+        self.__ronda2 = 0  # 0: no contestó, 1: respondió bien, 2: respondió mal
+        self.__escalon_actual = 1  # Escalón inicial
 
-
-    # def get_jugador(self, id_jugador):
-    #     return self.__jugadordao.get_jugador(id_jugador)
-
-
-    # def agregar_jugador(self, jugador):
-    #     return self.__jugadordao.agregar_jugador(jugador)
-
-
-    # def actualizar_jugador(self, jugador):
-    #     return self.__jugadordao.actualizar_jugador(jugador)
-
-
-    # def borrar_jugador(self, id_jugador):
-    #     return self.__jugadordao.borrar_jugador(id_jugador)
-
-    #GETTERS Y SETTERS
-    def get_nombre_jugador(self):
-        return self.__nombre_jugador
-
-    def get_escalon_actual(self):
-        return self.__escalon_actual
-
-    def get_imagen(self):
-        return self.__imagen
-
-    def get_ronda1(self):
-        return self.__ronda1
-
-    def get_ronda2(self):
-        return self.__ronda2
-
-    def set_nombre_jugador (self, nombre_jugador):
-        self.__nombre_jugador = nombre_jugador
+    def avanzar_escalon(self):
+        # Método para avanzar al siguiente escalón
+        self.__escalon_actual += 1
