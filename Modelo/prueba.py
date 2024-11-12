@@ -6,20 +6,6 @@ from Partida import Partida
 from Jugador import Jugador
 from Tema import Tema
 
-
-preguntaRonda1 = preguntaRonda(tema="Historia", enunciado="¿En qué año comenzó la Segunda Guerra Mundial?", opcionA="1935", opcionB="1939", opcionC="1941", opcionD="1945", opcionCorrecta="B")
-preguntaRonda2 = preguntaRonda(tema="Historia", enunciado="¿Quién fue el primer presidente de los Estados Unidos?", opcionA="Thomas Jefferson", opcionB="George Washington", opcionC="Abraham Lincoln", opcionD="John Adams", opcionCorrecta="B")
-preguntaRonda3 = preguntaRonda(tema="Historia", enunciado="¿En qué año se firmó la Declaración de Independencia de los Estados Unidos?", opcionA="1776", opcionB="1789", opcionC="1804", opcionD="1812", opcionCorrecta="A")
-preguntaRonda4 = preguntaRonda(tema="Historia", enunciado="¿Cuál de las siguientes civilizaciones construyó las pirámides de Egipto?", opcionA="Romanos", opcionB="Griegos", opcionC="Egipcios", opcionD="Persas", opcionCorrecta="C")
-preguntaRonda5 = preguntaRonda(tema="Historia", enunciado="¿Quién fue el líder de la Revolución Cubana?", opcionA="Che Guevara", opcionB="Fidel Castro", opcionC="Raúl Castro", opcionD="Camilo Cienfuegos", opcionCorrecta="B")
-
-preguntaDesempate1 = preguntaDesempate(tema="Historia", enunciado="¿En qué año cayó el Muro de Berlín?", respuestaCorrecta="1989")
-preguntaDesempate2 = preguntaDesempate(tema="Historia", enunciado="¿Quién fue el emperador romano durante la erupción del Monte Vesubio que destruyó Pompeya?", respuestaCorrecta="Tito")
-preguntaDesempate3 = preguntaDesempate(tema="Historia", enunciado="¿En qué año comenzó la Revolución Francesa?", respuestaCorrecta="1789")
-
-listaPR = [preguntaRonda1, preguntaRonda2, preguntaRonda3, preguntaRonda4, preguntaRonda5]
-listaPD = [preguntaDesempate1, preguntaDesempate1,preguntaDesempate1]
-
 ################################################# boceto de lo queseria una partida
 
 #iniciaria el juego nuevo pidiendo a la base de datos una lista con los temas disponibles para jugar
@@ -117,8 +103,8 @@ escalon1.set_jugadores(listaJugadores)
 
 #les hacemos preguntas a los jugadores y sale quien tiene que ser eliminado
 
-escalon1.quitarJugador(jugador)
-escalon1.set_jugadorEliminado(jugador)
+#escalon1.quitarJugador(jugador)
+#escalon1.set_jugadorEliminado(jugador)
 
 #terminó el escalon1
 
