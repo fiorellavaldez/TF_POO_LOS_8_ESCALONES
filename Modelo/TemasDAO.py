@@ -16,19 +16,22 @@ class TemasDAO:
             cursor.execute("SELECT id_tema, nombre_tema FROM temas WHERE id_tema = %s", (id_tema,))
             return cursor.fetchone()
 
-    def agregar_tema(self, id_tema, nombre_tema):
+    def agregar_tema(self, tema):
         with self.connection.cursor() as cursor:
             cursor.execute(
                 "INSERT INTO temas (id_tema, nombre_tema) VALUES (%s, %s)",
-                (id_tema, nombre_tema)
+                (tema.get_id_tema(), tema.get_nombre_tema())
             )
+            indice_tema = cursor.execute ("SELECT MAX(id_tema) FROM temas ")
+            tema.set_id_tema(int(indice_tema)) #esto lo que hace es incrementar el indice porque los id son tipo serial
+            self.connection.commit()
             self.connection.commit()
 
-    def actualizar_tema(self, id_tema, nombre_tema):
+    def actualizar_tema(self, tema):
         with self.connection.cursor() as cursor:
             cursor.execute(
                 "UPDATE temas SET nombre_tema = %s WHERE id_tema = %s",
-                (nombre_tema, id_tema)
+                (tema.get_nombre_tema(), tema.get_id_tema())
             )
             self.connection.commit()
 
