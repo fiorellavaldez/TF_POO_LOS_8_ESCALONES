@@ -31,7 +31,7 @@ class Jugador:
 
     # def borrar_jugador(self, id_jugador):
     #     return self.__jugadordao.borrar_jugador(id_jugador)
-    
+
     #GETTERS Y SETTERS
     def get_nombre_jugador(self):
         return self.__nombre_jugador
@@ -41,6 +41,12 @@ class Jugador:
 
     def get_imagen(self):
         return self.__imagen
+
+    def get_ronda1(self):
+        return self.__ronda1
+
+    def get_ronda2(self):
+        return self.__ronda2
 
     def set_nombre_jugador (self, nombre_jugador):
         self.__nombre_jugador = nombre_jugador
