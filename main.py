@@ -5,5 +5,5 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     controlador = ControladorPantallaInicio()
-    sys.exit(app.exec()) #hola
+    sys.exit(app.exec())
 
