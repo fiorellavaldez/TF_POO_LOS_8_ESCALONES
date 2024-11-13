@@ -10,8 +10,10 @@ class ControladorVistaJugadorNuevo:
         self.__vista = Ui_MainWindow()
         self.__vista.setupUi(self.MainWindow)
         self.MainWindow.show()
-        #self.i = self.lista_imagenes[0]
-        self.lista_imagenes = ["vista/img/avatar_azul.png","vista/img/icono_verde.png"]
+
+        self.lista_imagenes = ["vista/img/avatar_azul.png","vista/img/ta.png", "vista/img/da.jpg", "vista/img/fi.jpg"]
+        self.imagen_actual = self.lista_imagenes[0]
+        self.__vista.set_label_img(self.imagen_actual)
         
         #self.__vista.get_button_agregar_jugador().clicked.connect(self.__agregar_jugador_bd_)
         self.__vista.get_button_cancelar().clicked.connect(self.__volver_seleccion_de_jugadores)
@@ -44,9 +46,19 @@ class ControladorVistaJugadorNuevo:
         #inidice y lista
         #va al metodo siguiente
         #if not i = len(self.lista)
-        i = self.lista_imagenes[0]
-        i += 1
-        self.__vista.set_label_img(self.lista_imagenes[i])
+        # i = self.lista_imagenes[0]
+        # i += 1
+        # self.__vista.set_label_img(self.lista_imagenes[i])
+        if len(self.imagen_actual) > 0:
+            i = self.lista_imagenes.index(self.imagen_actual)
+            i = (i + 1) % len(self.lista_imagenes)
+            self.__vista.set_label_img(self.lista_imagenes[i])
+            self.imagen_actual = self.lista_imagenes[i]
+
 
     def __mostrar_imagen_anterior(self):
-        pass
+        if len(self.lista_imagenes) > 0:
+            i = self.lista_imagenes.index(self.imagen_actual)
+            i = (i - 1) % len(self.lista_imagenes)
+            self.__vista.set_label_img(self.lista_imagenes[i])
+            self.imagen_actual = self.lista_imagenes[i]
