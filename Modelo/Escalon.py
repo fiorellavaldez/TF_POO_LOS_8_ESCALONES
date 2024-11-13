@@ -10,14 +10,14 @@ class Escalon():
         self.__tema = tema
     
     def get_jugadores(self):
-        self.__jugadores
+        return self.__jugadores
     def set_jugadores(self, listaJugadores):
         self.__jugadores = listaJugadores
 
-    def quitarJugador(self, jugador): # Esto es para sacar de la lista de jugadores activos, al jugador que perdio en ese escalon
+    def eliminar_jugador(self, jugador): # Esto es para sacar de la lista de jugadores activos, al jugador que perdio en ese escalon
         self.__jugadores.remove(jugador)
     
-    def set_jugadorEliminado(self, jugador): # agrega al jugador que perdio a jugadorEliminado
-        self.__jugadorEliminado = jugador
-    def get_jugadorEliminado(self):
-        return self.__jugadorEliminado
+    #def set_jugadorEliminado(self, jugador): # agrega al jugador que perdio a jugadorEliminado
+    #    self.__jugadorEliminado = jugador
+    #def get_jugadorEliminado(self):
+    #    return self.__jugadorEliminado
