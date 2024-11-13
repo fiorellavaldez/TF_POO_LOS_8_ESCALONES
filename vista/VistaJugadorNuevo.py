@@ -129,6 +129,11 @@ class Ui_MainWindow(object):
     def get_entrada_texto(self): #para obtener el dato que se escribio 
         return  self.lineEdit.text()
     
+    def set_label_img(self, path):
+        self.label_3.setPixmap(QtGui.QPixmap(path))
+        self.label_3.setScaledContents(True)
+
+    
     def imprimo_alerta (self):
         msg = QtWidgets.QMessageBox()
         msg.setIcon(QtWidgets.QMessageBox.Icon.Critical)
