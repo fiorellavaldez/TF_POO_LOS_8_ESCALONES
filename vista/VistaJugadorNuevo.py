@@ -60,6 +60,7 @@ class Ui_MainWindow(object):
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout_3.addWidget(self.pushButton)
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_3.setFixedSize(175,120)
         self.label_3.setStyleSheet("background-color: rgb(0, 85, 0);")
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")
@@ -129,7 +130,7 @@ class Ui_MainWindow(object):
     def get_entrada_texto(self): #para obtener el dato que se escribio 
         return  self.lineEdit.text()
     
-    def set_label_img(self, path):
+    def set_label_img(self, path:str):
         self.label_3.setPixmap(QtGui.QPixmap(path))
         self.label_3.setScaledContents(True)
 
