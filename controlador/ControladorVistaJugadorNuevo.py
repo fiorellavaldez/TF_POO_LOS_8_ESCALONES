@@ -11,7 +11,7 @@ class ControladorVistaJugadorNuevo:
         self.__vista.setupUi(self.MainWindow)
         self.MainWindow.show()
 
-        self.lista_imagenes = ["vista/img/avatar_azul.png","vista/img/ta.png", "vista/img/da.jpg", "vista/img/fi.jpg"]
+        self.lista_imagenes = ["vista/img/avatar_azul.png","vista/img/ta.png", "vista/img/da.jpg", "vista/img/fi.jpg", "vista/img/edna.jpg"]
         self.imagen_actual = self.lista_imagenes[0]
         self.__vista.set_label_img(self.imagen_actual)
         
