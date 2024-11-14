@@ -14,33 +14,33 @@ class TemasDAO:
 
     def get_tema(self, id_tema):
         with self.__bd.cursor() as cursor:
-            cursor.execute("SELECT id_tema, nombre_tema FROM temas WHERE id_tema = %s", (id_tema,))
+            cursor.execute(
+                "SELECT id_tema, nombre_tema FROM temas WHERE id_tema = %s", 
+                (id_tema,)
+                )
             return cursor.fetchone()
 
     def agregar_tema(self, tema):
         with self.__bd.cursor() as cursor:
             cursor.execute(
-                "INSERT INTO temas (id_tema, nombre_tema) VALUES (%s, %s)",
-                (tema.get_id_tema(), tema.get_nombre_tema())
-            )
-            indice_tema = cursor.execute ("SELECT MAX(id_tema) FROM temas ")
-            tema.set_id_tema(int(indice_tema)) #esto lo que hace es incrementar el indice porque los id son tipo serial
-            self.__bd.commit()
-            
+                "INSERT INTO temas (nombre_tema) VALUES (%s)",
+                (tema,)
+                )
+            cursor.connection.commit()
 
-    def actualizar_tema(self, tema):
+    def actualizar_tema(self, id, tema):
         with self.__bd.cursor() as cursor:
             cursor.execute(
                 "UPDATE temas SET nombre_tema = %s WHERE id_tema = %s",
-                (tema.get_nombre_tema(), tema.get_id_tema())
-            )
-            self.__bd.commit()
+                (tema, id)
+                )
+            cursor.connection.commit()
 
     def temas_partida (self): #Agarramos la informacion de tablas de teams y seleccionamos 8 temas al azar y los guardamos en una lista
         temas = self.get_all_temas()
         lista_temas_partida = []
         random.shuffle(temas)
-        for i in range (0,7):
+        for i in range (0,8):
             lista_temas_partida.append(temas.pop())
         return lista_temas_partida    
     

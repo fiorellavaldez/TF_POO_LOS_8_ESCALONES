@@ -2,6 +2,7 @@ from vista.VistaConfiguracionModificarTema import Ui_MainWindow
 
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QTableWidgetItem
+from Modelo.TemasDAO import TemasDAO
 
 class ControladorVistaConfiguracionModificarTemas:
     def __init__(self, controlador_anterior):
@@ -26,6 +27,10 @@ class ControladorVistaConfiguracionModificarTemas:
         for i in range(1,30):
             reg=(str(i),"Tema "+str(i))
             lista_temas.append(reg)
+
+        temas = TemasDAO()
+        lista_temas = temas.get_all_temas()
+        
 
         self.__vista.tableWidget.setRowCount(len(lista_temas))
         for linea, (id_tema, nombre_tema) in enumerate(lista_temas):  
