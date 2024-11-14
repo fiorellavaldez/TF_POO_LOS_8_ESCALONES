@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 from Pregunta import Pregunta, preguntaRonda, preguntaDesempate
 from .bd import Database
-
+# preguntas distinguiendo entre preguntas de ronda y desempate
 class PreguntaDAO:
     def __init__(self):
         self.__bd = Database()
