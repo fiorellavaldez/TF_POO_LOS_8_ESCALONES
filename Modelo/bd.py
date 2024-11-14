@@ -1,6 +1,7 @@
 import psycopg2
 from dotenv import load_dotenv
 import os
+from pass_bd import contra
 
 class DataBaseMeta(type): #singleton
 
@@ -25,7 +26,7 @@ class Database(metaclass=DataBaseMeta):
                 port=5432, 
                 database='Los8Escalones', 
                 user='postgres', 
-                password='2323')
+                password=contra)
             print('Conexion exitosa')
 
         except (Exception, psycopg2.DatabaseError) as error:
