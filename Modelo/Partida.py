@@ -5,4 +5,4 @@ class Partida():
     def set_escalones(self, escalones):
         self.__escalones = escalones
     def get_escalones(self):
-        return self.__escalones
+        return self.__escalonesg

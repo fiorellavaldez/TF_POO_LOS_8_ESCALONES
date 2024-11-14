@@ -2,7 +2,7 @@ from vista.VistaConfiguracionModificarTema import Ui_MainWindow
 
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QTableWidgetItem
-from Modelo.TemasDAO import TemasDAO
+from  modelo.TemasDAO import TemasDAO
 
 class ControladorVistaConfiguracionModificarTemas:
     def __init__(self, controlador_anterior):

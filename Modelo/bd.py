@@ -23,9 +23,9 @@ class Database(metaclass=DataBaseMeta):
             self.conexion = psycopg2.connect(
                 host='localhost', 
                 port=5432, 
-                database='8_escalones', 
+                database='Los8Escalones', 
                 user='postgres', 
-                password='root')
+                password='2323')
             print('Conexion exitosa')
 
         except (Exception, psycopg2.DatabaseError) as error:
