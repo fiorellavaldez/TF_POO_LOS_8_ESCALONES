@@ -1,4 +1,5 @@
 from vista.VistaSeleccionDeTemaModificarPreguntasDeRonda import Ui_MainWindow
+from controlador.ControladorVistaConfiguracionModificarPreguntasRonda import ControladorVistaConfiguracionModificarPreguntasRonda
 from PyQt6 import QtWidgets
 
 class ControladorVistaSeleccionTemaModificarPreguntasRonda:
@@ -10,8 +11,12 @@ class ControladorVistaSeleccionTemaModificarPreguntasRonda:
         self.MainWindow.show()
         
         self.__vista.get_button_atras().clicked.connect(self.__volver_configuracion)
-#        self.__vista.get_button_agregar_pregunta().clicked.connect(self)
+        self.__vista.get_button_seleccionar_pregunta().clicked.connect(self.__seleccionar_pregunta)
 
     def __volver_configuracion(self):
         self.MainWindow.hide()
         self.__controlador_anterior.MainWindow.show()
+
+    def __seleccionar_pregunta(self):
+        self.MainWindow.hide()
+        self.controlador_seleccionar_pregunta = ControladorVistaConfiguracionModificarPreguntasRonda(self)

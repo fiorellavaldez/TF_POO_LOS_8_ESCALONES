@@ -76,7 +76,7 @@ class Ui_MainWindow(object):
     def get_button_atras(self):
         return self.pushButton_2
 
-    def get_button_agregar_pregunta(self):
+    def get_button_seleccionar_pregunta(self):
         return self.pushButton_3
 # if __name__ == "__main__":
 #     import sys
