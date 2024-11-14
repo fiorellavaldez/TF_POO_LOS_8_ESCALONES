@@ -32,11 +32,6 @@ class ControladorVistaConfiguracionModificarTemas:
             self.__vista.tableWidget.setItem(linea, 0, QTableWidgetItem(id_tema))  
             self.__vista.tableWidget.setItem(linea, 1, QTableWidgetItem(nombre_tema))  
 
-
-
-        #self.tableWidget.setHorizontalHeaderLabels(['Nombre', 'Apellido', 'Edad'])
-
-
     def __volver_configuracion(self):
         self.MainWindow.hide()
         self.__controlador_anterior.MainWindow.show()
