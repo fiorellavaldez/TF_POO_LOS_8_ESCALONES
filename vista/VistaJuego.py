@@ -1,36 +1,35 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
-from WidgetJugador import WidgetJugador
+from vista.WidgetJugador import WidgetJugador
 
 
-class WidgetEscalon(QtWidgets.QWidget):
+# class WidgetEscalon(QtWidgets.QWidget):
         
-        def __init__(self):
-            #self.wd_escalon1 = QtWidgets.QWidget(parent=self.widget_escalera)
-            self.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed))
-            self.setMinimumSize(QtCore.QSize(920, 0))
-            self.setMaximumSize(QtCore.QSize(920, 70))
-            self.setStyleSheet("background-color: rgb(213, 213, 213);")
+#         def __init__(self):
+#             #self.wd_escalon1 = QtWidgets.QWidget(parent=self.widget_escalera)
+#             self.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed))
+#             self.setMinimumSize(QtCore.QSize(920, 0))
+#             self.setMaximumSize(QtCore.QSize(920, 70))
+#             self.setStyleSheet("background-color: rgb(213, 213, 213);")
             
-            self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self)
-            self.horizontalLayout_2.setContentsMargins(-1, 0, -1, 0)
-            self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-            self.ly_escalon1 = QtWidgets.QHBoxLayout()
-            self.ly_escalon1.setObjectName("ly_escalon1")
-            self.icono_escalon1 = QtWidgets.QLabel(parent=self)
-            self.icono_escalon1.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed))
-            self.icono_escalon1.setMaximumSize(QtCore.QSize(50, 50))
-            self.icono_escalon1.setPixmap(QtGui.QPixmap("vista/img/number-1-circle-svgrepo-com.png"))
-            self.icono_escalon1.setScaledContents(True)
-            self.icono_escalon1.setObjectName("icono_escalon1")
-            self.ly_escalon1.addWidget(self.icono_escalon1)
-            self.tematica_escalon1 = QtWidgets.QLabel(parent=self)
-            font = QtGui.QFont()
-            font.setFamily("Sitka")
-            font.setPointSize(18)
-            self.tematica_escalon1.setFont(font)
-            self.tematica_escalon1.setObjectName("tematica_escalon1")
-            self.ly_escalon1.addWidget(self.tematica_escalon1)
-
+#             self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self)
+#             self.horizontalLayout_2.setContentsMargins(-1, 0, -1, 0)
+#             self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+#             self.ly_escalon1 = QtWidgets.QHBoxLayout()
+#             self.ly_escalon1.setObjectName("ly_escalon1")
+#             self.icono_escalon1 = QtWidgets.QLabel(parent=self)
+#             self.icono_escalon1.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed))
+#             self.icono_escalon1.setMaximumSize(QtCore.QSize(50, 50))
+#             self.icono_escalon1.setPixmap(QtGui.QPixmap("vista/img/number-1-circle-svgrepo-com.png"))
+#             self.icono_escalon1.setScaledContents(True)
+#             self.icono_escalon1.setObjectName("icono_escalon1")
+#             self.ly_escalon1.addWidget(self.icono_escalon1)
+#             self.tematica_escalon1 = QtWidgets.QLabel(parent=self)
+#             font = QtGui.QFont()
+#             font.setFamily("Sitka")
+#             font.setPointSize(18)
+#             self.tematica_escalon1.setFont(font)
+#             self.tematica_escalon1.setObjectName("tematica_escalon1")
+#             self.ly_escalon1.addWidget(self.tematica_escalon1)
 
 
 class Ui_MainWindow(object):
@@ -379,26 +378,34 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        
+        self.lista_nombres_escalon = [self.tematica_escalon1, self.tematica_escalon2, self.tematica_escalon3, self.tematica_escalon4, self.tematica_escalon5, self.tematica_escalon6, self.tematica_escalon7, self.tematica_escalon8 ]
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.tematica_escalon8.setText(_translate("MainWindow", "DEPORTES"))
-        self.tematica_escalon7.setText(_translate("MainWindow", "DEPORTES"))
-        self.tematica_escalon6.setText(_translate("MainWindow", "DEPORTES"))
-        self.tematica_escalon5.setText(_translate("MainWindow", "CIENCIA"))
-        self.tematica_escalon4.setText(_translate("MainWindow", "ARTE"))
-        self.tematica_escalon3.setText(_translate("MainWindow", "MÚSICA"))
-        self.tematica_escalon2.setText(_translate("MainWindow", "HISTORIA"))
-        self.tematica_escalon1.setText(_translate("MainWindow", "GEOGRAFÍA"))
+        self.tematica_escalon8.setText(_translate("MainWindow", "-"))
+        self.tematica_escalon7.setText(_translate("MainWindow", "-"))
+        self.tematica_escalon6.setText(_translate("MainWindow", "-"))
+        self.tematica_escalon5.setText(_translate("MainWindow", "-"))
+        self.tematica_escalon4.setText(_translate("MainWindow", "-"))
+        self.tematica_escalon3.setText(_translate("MainWindow", "-"))
+        self.tematica_escalon2.setText(_translate("MainWindow", "-"))
+        self.tematica_escalon1.setText(_translate("MainWindow", "-"))
         self.pushButton_atras.setText(_translate("MainWindow", "Atras"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())
+    def get_button_atras(self):
+        return self.pushButton_atras
+
+    def get_lista_nombres_escalon(self):
+        return self.lista_nombres_escalon
+
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     MainWindow = QtWidgets.QMainWindow()
+#     ui = Ui_MainWindow()
+#     ui.setupUi(MainWindow)
+#     MainWindow.show()
+#     sys.exit(app.exec())

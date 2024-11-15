@@ -9,18 +9,18 @@ class JugadorDAO:
 
     def get_all_jugadores(self):
         with self.__bd.cursor() as cursor:
-            cursor.execute("SELECT nombre_jugador, puntaje FROM jugador")
+            cursor.execute("SELECT id_jugador, nombre_jugador FROM jugador")
             return cursor.fetchall()
 
     def get_jugador(self, id_jugador):
         with self.__bd.cursor() as cursor:
-            cursor.execute("SELECT nombre_jugador, puntaje FROM jugador WHERE id_jugador = %s", (id_jugador,))
+            cursor.execute("SELECT nombre_jugador, FROM jugador WHERE id_jugador = %s", (id_jugador,))
             return cursor.fetchone()
 
     def agregar_jugador(self, jugador):
         with self.__bd.cursor() as cursor:
             cursor.execute(
-                """INSERT INTO jugador (id_jugador, nombre_jugador, puntaje , estado_jugador) 
+                """INSERT INTO jugador (id_jugador, nombre_jugador , estado_jugador) 
                 VALUES (%s, %s, %s, %s)""",
                 (jugador.get_id_jugador(), jugador.get_nombre_jugador(), jugador.get_puntaje() , jugador.get_estado_jugador())
             )

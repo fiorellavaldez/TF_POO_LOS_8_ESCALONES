@@ -1,6 +1,5 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
-
 class WidgetJugador(QtWidgets.QWidget):
     def __init__(self, parent, nombre:str, avatar:str, img_r1:str, img_r2:str):
         super().__init__(parent)

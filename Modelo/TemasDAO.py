@@ -40,7 +40,7 @@ class TemasDAO:
         temas = self.get_all_temas()
         lista_temas_partida = []
         random.shuffle(temas)
-        for i in range (0,8):
+        for i in range (0,9):
             lista_temas_partida.append(temas.pop())
         return lista_temas_partida    
     
