@@ -37,4 +37,4 @@ class ControladorVistaJuego:
     def __asignar_temas(self):
         lista_qlabels = self.__vista.get_lista_nombres_escalon()
         for i in range(0,8):
-            lista_qlabels[i].setText(self.__lista_temas[i][1])
+            lista_qlabels[i].setText((self.__lista_temas[i][1]).upper())

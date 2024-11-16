@@ -71,6 +71,32 @@ class Ui_MainWindow(object):
         jugadores = [
         ("Jugador 1", "vista/img/al.jpg"),
         ("Jugador 2", "vista/img/ta.png"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
+        ("Jugador 3", "vista/img/da.jpg"),
         ("Jugador 3", "vista/img/da.jpg"),]
         self.tableWidget = QtWidgets.QTableWidget(len(jugadores), 2)
         self.tableWidget.setHorizontalHeaderLabels(["Nombre", "Avatar"])
@@ -92,7 +118,7 @@ class Ui_MainWindow(object):
         self.tableWidget.resizeRowsToContents()
 
         for i in range(self.tableWidget.columnCount()):
-            self.tableWidget.horizontalHeader().setSectionResizeMode(i, QtWidgets.QHeaderView.Stretch)
+            self.tableWidget.horizontalHeader().setSectionResizeMode(i, QHeaderView.ResizeMode.Stretch)
 
         self.verticalLayout.addWidget(self.tableWidget)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()

@@ -7,3 +7,4 @@ if __name__ == "__main__":
     controlador = ControladorPantallaInicio()
     sys.exit(app.exec())
 
+ 
