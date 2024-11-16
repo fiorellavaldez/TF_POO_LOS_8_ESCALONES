@@ -16,76 +16,56 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Orientation::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>84</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
-        <pointsize>35</pointsize>
+        <pointsize>22</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Tema Nuevo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Modificar preguntas de ronda&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
     <item>
-     <spacer name="verticalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Orientation::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>85</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="label_3">
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <pointsize>9</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Ingrese el nombre del tema nuevo:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Seleccione a que tema pertenecen las preguntas que quiere modificar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit">
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Buscar:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
-     <spacer name="verticalSpacer_3">
-      <property name="orientation">
-       <enum>Qt::Orientation::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>84</height>
-       </size>
-      </property>
-     </spacer>
+     <widget class="QListView" name="listView"/>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -93,7 +73,7 @@
        <widget class="QPushButton" name="pushButton_2">
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <pointsize>12</pointsize>
          </font>
         </property>
         <property name="text">
@@ -118,7 +98,7 @@
        <widget class="QPushButton" name="pushButton_3">
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <pointsize>12</pointsize>
          </font>
         </property>
         <property name="text">

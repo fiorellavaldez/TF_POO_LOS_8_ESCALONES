@@ -39,12 +39,6 @@ class Ui_MainWindow(object):
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout_3.addWidget(self.pushButton)
-        self.pushButton_2 = QtWidgets.QPushButton(parent=self.centralwidget)
-        font = QtGui.QFont()
-        font.setPointSize(22)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.verticalLayout_3.addWidget(self.pushButton_2)
         self.pushButton_4 = QtWidgets.QPushButton(parent=self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(22)
@@ -83,24 +77,28 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Configuración"))
-        self.pushButton.setText(_translate("MainWindow", "Modificar Peguntas de Ronda"))
-        self.pushButton_2.setText(_translate("MainWindow", "  Modificar Peguntas de Desempate  "))
-        self.pushButton_4.setText(_translate("MainWindow", "Modificar Temas"))
-        self.pushButton_5.setText(_translate("MainWindow", "Crear Tema Nuevo"))
-        self.pushButton_6.setText(_translate("MainWindow", "Atrás"))
+        self.label.setText(_translate("MainWindow", "Los 8 Escalones"))
+        self.pushButton.setText(_translate("MainWindow", "Nueva Partida"))
+        self.pushButton_4.setText(_translate("MainWindow", "Continuar"))
+        self.pushButton_5.setText(_translate("MainWindow", "Configuracion"))
+        self.pushButton_6.setText(_translate("MainWindow", "Salir"))
 
-    def get_button_modificar_preguntas_ronda(self):
+    def get_button_configuracion(self):
+        return self.pushButton_5 # estaría bien renombrar los 'pushButton_5' para saber de qué es el botón
+    
+    def get_button_nueva_partida(self):
         return self.pushButton
-
-    def get_button_modificar_preguntas_desempate(self):
-        return self.pushButton_2
-
-    def get_button_modificar_temas(self):
+    
+    def get_button_continuar(self):
         return self.pushButton_4
-
-    def get_button_tema_nuevo(self):
-        return self.pushButton_5
-
-    def get_button_atras(self):
+    
+    def get_button_salir(self):
         return self.pushButton_6
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     MainWindow = QtWidgets.QMainWindow()
+#     ui = Ui_MainWindow()
+#     ui.setupUi(MainWindow)
+#     MainWindow.show()
+#     sys.exit(app.exec())
